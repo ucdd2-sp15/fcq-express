@@ -1,0 +1,29 @@
+extends ../layout.jade
+
+block content         
+
+    div.row
+        div.one.column
+            | Year
+        div.one.column
+            | Term
+        div.two.columns
+            | Course
+        div.three.columns
+            | Instructor
+        div.four.columns
+            | Ratings        
+
+    each item in courses
+        div.row
+            div.one.column
+                include field_year
+            div.one.column
+                include field_term
+            div.two.columns
+                include field_name
+            div.three.columns
+                include field_instructors
+            div.four.columns
+                include field_ratings
+

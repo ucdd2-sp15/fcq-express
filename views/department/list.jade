@@ -1,0 +1,17 @@
+extends ../layout.jade
+
+block content         
+
+    div.row
+        div.one.column
+            | Dept.
+        div.four.columns
+            | Instructors
+
+    each item in departments
+        div.row
+            div.one.column
+                include field_name        
+            div.four.columns
+                include field_instructors
+

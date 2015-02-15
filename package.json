@@ -1,0 +1,16 @@
+{
+  "name": "fcq-express",
+  "version": "1.0.0",
+  "description": "Express Powered Site for FCQ results",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.11.2",
+    "jade": "^1.9.2",
+    "monk": "^0.9.1"
+  }
+}
