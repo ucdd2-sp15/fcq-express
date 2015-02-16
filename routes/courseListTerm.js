@@ -5,7 +5,7 @@ module.exports = function(app) {
         // get the courses collection
         var courses = app.db.get('courses')
 
-        var yearterm = '20067'
+        var yearterm = req.params.year + (req.params.term == "Fall" ? "7" : "1")
 
         // compose a query to look up docs whose 'categories' field contains the word 'Doctors'
         var q = {'YearTerm' : yearterm}
