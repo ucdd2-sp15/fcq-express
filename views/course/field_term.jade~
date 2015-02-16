@@ -1,5 +1,5 @@
 a(href="/course/list/term/2006/spring")
     if item['YearTerm'].substring(4,5) == 7
-        = "Fall"     
+        p= "Fall"     
     else
        p= "Spring"
