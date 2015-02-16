@@ -13,6 +13,14 @@ module.exports = function(app) {
             limit: 20
         }, function(err, docs) {
             
+            docs.forEach(function (doc){
+                
+                var year = doc.YearTerm.substring(0,4);
+                var term = doc.YearTerm.substring(4,5);
+                doc.YearTerm = year;
+                doc.Term = (term == 1 ? "Spring" : "Fall");
+            });
+
             res.render('course/list.jade', {
                 courses: docs
             })
