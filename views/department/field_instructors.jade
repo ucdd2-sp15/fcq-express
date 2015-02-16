@@ -1,2 +1,4 @@
 each c in item['courses']
-    = c.name
+	div.row
+		a(href='/instructor/view/' + c.name)
+			= c.name
