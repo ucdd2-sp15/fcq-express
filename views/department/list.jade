@@ -7,11 +7,18 @@ block content
             | Dept.
         div.four.columns
             | Instructors
+        div.two.columns
+            | # Instructors
+        div.three.columns
+            | # of courses taught by Prof
 
     each item in departments
         div.row
             div.one.column
-                include field_name        
+              = item.department
             div.four.columns
                 include field_instructors
-
+            div.two.columns
+                include count_profs
+            div.three.columns
+              include count_courses
