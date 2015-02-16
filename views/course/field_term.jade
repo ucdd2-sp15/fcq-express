@@ -1,2 +1,2 @@
 a(href="/course/list/term/2006/spring")
-    = item['Term']
+    = (item['YearTerm'].substring(4, 5) == "1" ? "Spring" : "Fall")
