@@ -18,3 +18,7 @@ img {
 	border: 1px #aaa solid;
 	padding: 2px;
 }
+
+.row{
+	border-bottom: 1px #d3d3d3 solid;
+}

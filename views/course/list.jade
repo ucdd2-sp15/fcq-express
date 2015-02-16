@@ -4,15 +4,15 @@ block content
 
     div.row
         div.one.column
-            | Year
+            b= "Year"
         div.one.column
-            | Term
+            b= "Term"
         div.two.columns
-            | Course
-        div.three.columns
-            | Instructor
+            b= "Course"
         div.four.columns
-            | Ratings        
+            b= "Instructor"
+        div.three.columns
+            b= "Ratings"
 
     each item in courses
         div.row
@@ -22,8 +22,8 @@ block content
                 include field_term
             div.two.columns
                 include field_name
-            div.three.columns
-                include field_instructors
             div.four.columns
+                include field_instructors
+            div.three.columns
                 include field_ratings
 
