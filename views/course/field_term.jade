@@ -1,2 +1,7 @@
+- var year = item['YearTerm']
+- var sub = "200"
+if year.length == 6
+    - sub = "20"
+
 a(href="/course/list/term/2006/spring")
-    = item['YearTerm']
+    = year.substring(0, 4) + "-" + sub + year.substring(4, year.length)
