@@ -18,5 +18,9 @@ block content
             div.four.columns
                 include field_instructors
             div.three.columns
-                item.courses.length
-
+                = item.courses.length
+            div.three.cloumns
+                -var counter = 0
+                each c in item['courses']
+                    -counter += c.CoursesTaught.length
+                = counter
