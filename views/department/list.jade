@@ -7,11 +7,16 @@ block content
             | Dept.
         div.four.columns
             | Instructors
-
+        div.three.columns
+            | Total Intructors
+        div.three.columns
+            | Total Courses Taught
     each item in departments
         div.row
             div.one.column
                 include field_name        
             div.four.columns
                 include field_instructors
+            div.three.columns
+                item.courses.length
 
