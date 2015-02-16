@@ -1,2 +1,11 @@
-| Course Avg:
-= item['AvgCourse']
+| Course Avg: 
+if item['AvgCourse']
+	= item['AvgCourse']
+else
+	= "N/A"
+br
+| Instructor Avg: 
+if item['AvgInstructor']
+	= item['AvgInstructor']
+else
+	= "N/A"
