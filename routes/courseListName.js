@@ -6,7 +6,7 @@ module.exports = function(app) {
         var courses = app.db.get('courses')
 
         // compose a query
-        var q = {}  // TODO
+        var q = { "Subject" : req.params.subject, "Course": req.params.number}  // TODO
 
         // execute the query to find those matched limiting to 20
         courses.find(q, {

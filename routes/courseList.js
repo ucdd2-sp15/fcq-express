@@ -12,7 +12,7 @@ module.exports = function(app) {
         courses.find(q, {
             limit: 20
         }, function(err, docs) {
-            
+
             res.render('course/list.jade', {
                 courses: docs
             })

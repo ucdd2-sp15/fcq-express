@@ -1,2 +1,21 @@
-= item.insname1
-= item.insttl1
+-if(String(item.insname1) != ""){
+div.row
+	a(href='/view/pull/' + item.insname1)
+		= item.insname1
+	|, 
+	= item.insttl1
+-}
+-if(item.insname2 != ""){
+div.row
+	a(href='/view/pull/' + item.insname2)
+		= item.insname2
+	|, 
+	= item.insttl2
+-}
+-if(item.insname3 != ""){
+div.row
+	a(href='/view/pull/' + item.insname3)
+		= item.insname3
+	|, 
+	= item.insttl3
+-}
