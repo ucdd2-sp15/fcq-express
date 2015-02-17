@@ -1,2 +1,3 @@
 each c in item['courses']
-    = c.name
+    - var thing = c.name
+    a(href='/instructor/view/' + c.name.split(", ")[0] + "_" + c.name.split(" ")[1])= c.name
