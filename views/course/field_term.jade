@@ -1,2 +1,7 @@
-a(href="/course/list/term/2006/spring")
-    = item['YearTerm']
+- var len=item['YearTerm'].length
+if(item['YearTerm'][len-1] == "7")
+    a(href="/course/list/term/"+item['YearTerm'].substr(0, len-1)+"/fall")
+        |Fall
+if(item['YearTerm'][len-1] == "1")
+    a(href="/course/list/term/"+item['YearTerm'].substr(0, len-1)+"/spring")
+        |Spring

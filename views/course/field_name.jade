@@ -1,2 +1,25 @@
-a(href="/course/list/name/ENVD/1004")
-    = item['Subject'] + ' ' + item['Course']
+extends ../layout.jade
+
+block content
+    - var item = courses
+    h3 #{item[0].Subject} #{item[0].Course}
+    h3 #{item[0].CourseTitle}
+    div.row
+        div.one.column
+            | Year
+        div.one.column
+            | Term
+        div.one.column
+            | Section
+        div.one.column
+            | Hour(s)
+        div.three.columns
+            | Instructor
+
+    each items in item
+        div.row
+            div.one.column= items.YearTerm
+            div.one.column= items.YearTerm
+            div.one.column= items.Section
+            div.one.column= items.Hours
+            div.three.columns= items.insname1
