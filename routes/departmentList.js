@@ -6,13 +6,13 @@ module.exports = function(app) {
         var courses = app.db.get('departments')
 
         var q = {}
-
         // execute the query to find those matched limiting to 20
         courses.find(q, {
             limit: 10
         }, function(err, docs) {
             
             res.render('department/list.jade', {
+                courses: courses,
                 departments: docs
             })
         })
