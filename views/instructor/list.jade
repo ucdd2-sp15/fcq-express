@@ -11,7 +11,8 @@ block content
     each item in instructors
         div.row
             div.three.columns
-                include field_name        
+                a(href='/view/instructor/' + item.name)= item.name
             div.four.columns
-                include field_courses_taught
+                each course in item.Courses 
+                   p #{course.subject} #{course.number}
 
