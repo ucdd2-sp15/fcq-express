@@ -4,4 +4,20 @@ block content
 
     h1= item['name']
 
-    h2 TODOs: a list of courses taught by this instructor. Each item should have more details displayed.
+    for c in item["Courses"]
+        b Corse title:
+        = "   " + c.title
+        br
+        b Subject:
+        = "   " + c.subject
+        br
+        b Number:
+        = "   " + c.number
+        br
+        b Year Term:
+        = "   " + c.yearTerm
+        br
+        b Instructor Ave:
+        = "   " + c.avgInstructor
+        br
+        br

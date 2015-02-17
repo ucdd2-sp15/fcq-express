@@ -1,17 +1,26 @@
 extends ../layout.jade
 
-block content         
+block content
 
     div.row
         div.one.column
             | Dept.
         div.four.columns
             | Instructors
+        div.two.columns
+            | Instructor count
+        div.two.columns
+            | Course count
+
 
     each item in departments
         div.row
             div.one.column
-                include field_name        
+                include field_name
             div.four.columns
                 include field_instructors
+            div.two.columns
+                include field_instructor_count
+            div.two.columns
+                include field_course_count
 

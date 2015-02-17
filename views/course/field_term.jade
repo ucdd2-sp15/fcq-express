@@ -1,2 +1,11 @@
-a(href="/course/list/term/2006/spring")
-    = item['YearTerm']
+- var term = ""
+if item['YearTerm'].substring(4,5) == 7
+    - term = "Fall"
+else
+    - term = "Spring"
+
+a(href="/course/list/term/"+ item['YearTerm'].substring(0,4) + "/"+ term)
+    if item['YearTerm'].substring(4,5) == 7
+        = "Fall"
+    else
+        p = "Spring"

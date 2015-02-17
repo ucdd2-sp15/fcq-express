@@ -1,1 +1,5 @@
-| CSCI 1000, CSCI 2013, CSCI 1052 ...
+for course in item["Courses"]
+    a(href= '/course/list/name/' + course["subject"] + '/' + course["number"])
+        = course["subject"] + ' ' + course["number"] + ' '
+    div.row
+    // #6 also done
