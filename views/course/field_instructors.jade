@@ -1,2 +1,8 @@
-= item.insname1
-= item.insttl1
+- var num=item['NIntrFCQ']
+- for(var i=1; i<=num; i++){
+    - var underscored_lowercase = _.snakeCase(item["insname"+i])
+    - var underscored_name = underscored_lowercase.toUpperCase()
+    a(href="/instructor/view/"+underscored_name)
+        =item["insname"+i]+","
+    =item["insttl"+i]
+- }
