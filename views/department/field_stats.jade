@@ -1,0 +1,14 @@
+- var intructor_count = {}
+- var courses_count = 0
+
+each c in item['courses']
+    - c.name in intructor_count ? intructor_count[c.name] += 1 : intructor_count[c.name] = 0
+    - courses_count += 1
+
+ul
+    li
+        strong= "Total Instructors: " 
+        =Object.keys(intructor_count).length
+    li
+        strong= "Total Courses Taught: "
+        =courses_count

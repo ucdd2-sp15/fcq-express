@@ -1,2 +1,4 @@
-a(href="/course/list/term/2006/spring")
-    = item['YearTerm']
+- var term = (item['YearTerm'].charAt(4) == "7" ? "Fall" : "Spring")
+
+a(href="/course/list/term/" + item['YearTerm'].substr(0,4) + '/' + term)
+    = term
