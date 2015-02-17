@@ -7,6 +7,10 @@ block content
             | Dept.
         div.four.columns
             | Instructors
+        div.four.columns
+            | Number of Instructors
+        div.three.columns
+            | Number of Courses
 
     each item in departments
         div.row
@@ -14,4 +18,10 @@ block content
                 include field_name        
             div.four.columns
                 include field_instructors
+            div.four.columns= item["courses"].length
+            div.three.columns
+                - var acc = 0
+                for instructor in item['courses']
+                    - acc += instructor['CoursesTaught'].length
+                = acc
 
