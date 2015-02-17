@@ -22,6 +22,7 @@ app.get('/', function(req, res) {
 })
 
 // load routes for note, account, context
+require('./routes/courseListCourse')(app)
 require('./routes/courseList')(app)
 require('./routes/courseListTerm')(app)
 require('./routes/courseListName')(app)

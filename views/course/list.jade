@@ -21,7 +21,9 @@ block content
             div.one.column
                 include field_term
             div.two.columns
-                include field_name
+                b
+                 a(href="/course/list/"+item['Subject']+"/"+item['Course'])
+                    = item['Subject'] + ' ' + item['Course']
             div.three.columns
                 include field_instructors
             div.four.columns
