@@ -10,7 +10,7 @@ module.exports = function(app) {
 
         // execute the query to find those matched limiting to 20
         courses.find(q, {
-            limit: 20
+            limit: 100
         }, function(err, docs) {
             
             res.render('course/list.jade', {
