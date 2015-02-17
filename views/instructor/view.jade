@@ -2,6 +2,32 @@ extends ../layout.jade
 
 block content         
 
-    h1= item['name']
+	h1= item['name']
 
-    h2 TODOs: a list of courses taught by this instructor. Each item should have more details displayed.
+	h3= item['title']
+
+	each course in item.Courses
+		div.row
+			div.two.columns
+				h6 Title
+			div.two.columns
+				h6 Course Name
+			div.two.columns
+				h6 Year
+			div.two.columns
+				h6 Rating			
+		div.row
+			div.two.columns
+				h6=course.title			
+			div.two.columns
+				h6=course.subject+" "+ course.number+ " "
+			div.two.columns
+				h6=course.yearTerm
+			div.two.columns
+				h6=course.avgInstructor
+
+
+    
+
+
+    
