@@ -13,5 +13,6 @@ block content
             div.three.columns
                 a(href='/view/instructor/' + item.name)= item.name
             div.four.columns
-                item.Courses.title
+                each course in item.Courses 
+                   p #{course.subject} #{course.number}
 
