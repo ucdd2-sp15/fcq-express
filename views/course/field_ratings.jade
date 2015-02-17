@@ -1,2 +1,17 @@
 | Course Avg:
-= item['AvgCourse']
+if item['AvgCourse']
+    = item['AvgCourse']
+else 
+    = " --"
+br
+| Grade Avg:
+if item['AVG_GRD']
+    = item['AVG_GRD']
+else
+    = " --"
+br
+| Instructor Avg:
+if item['AvgInstructor']
+    = item['AvgInstructor']
+else
+    = " --"
