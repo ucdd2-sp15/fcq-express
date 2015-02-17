@@ -1,3 +1,16 @@
-= item.insname1
+a(href='/instructor/view/' + item.insname1)
+    =item.insname1
 br
 = item.insttl1
+if item.insname2
+    br
+    a(href='/instructor/view/' + item.insname2)
+        =item.insname2
+    br
+    = item.insttl2
+if item.insname3
+    br
+    a(href='/instructor/view/' + item.insname3)
+        =item.insname3
+    br
+    = item.insttl3
