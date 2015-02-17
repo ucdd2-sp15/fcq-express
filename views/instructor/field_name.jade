@@ -1,4 +1,7 @@
 
-- var underscored_name = 'DANIEL_DEASY' // <--- 'DEASY, DANIEL'
-a(href='/instructor/view/' + underscored_name)
+-// var test = item["name"]
+-// var sptest = test.split(" ")
+-//var underscored_name = sptest[1] + '_' + sptest[0].replace(/,/g , " ") // <--- 'DEASY, DANIEL'
+
+a(href='/instructor/view/' + item["name"])
     = item["name"]
