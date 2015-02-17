@@ -3,5 +3,14 @@ extends ../layout.jade
 block content         
 
     h1= item['name']
-
-    h2 TODOs: a list of courses taught by this instructor. Each item should have more details displayed.
+    each course in item.Courses
+        div#example-grid
+            div.row
+                div.three.columns Title:
+                div.three.columns= course.title
+            div.row
+                div.three.columns Year:
+                div.three.columns= course.yearTerm
+            div.row
+                div.three.columns Instructor Avg:
+                div.three.columns= (course.avgInstructor || "0")
