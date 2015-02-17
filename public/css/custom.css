@@ -18,3 +18,8 @@ img {
 	border: 1px #aaa solid;
 	padding: 2px;
 }
+
+.course-link {
+  margin-left: 5px;
+  margin-right: 5px;
+}

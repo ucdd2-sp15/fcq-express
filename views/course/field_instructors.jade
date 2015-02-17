@@ -1,2 +1,16 @@
-= item.insname1
-= item.insttl1
+-if(item.insname1 != "") {
+	a(href='/instructor/view/' + item.insname1)= item.insname1
+	h6= item.insttl1
+-}
+
+-if(item.insname2 != "") {
+p
+	a(href='/instructor/view/' + item.insname2)= item.insname2
+	h6= item.insttl2
+-}
+
+-if(item.insname3 != ""){
+p
+	a(href='/instructor/view/' + item.insname3)= item.insname3
+	h6= item.insttl3
+-}

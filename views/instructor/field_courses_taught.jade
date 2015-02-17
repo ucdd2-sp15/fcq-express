@@ -1,1 +1,3 @@
-| CSCI 1000, CSCI 2013, CSCI 1052 ...
+each course in item.Courses
+  a(href='/course/list/name/' + course.subject + '/' + course.number, class='course-link')= course.subject + ' ' + course.number
+  
