@@ -1,2 +1,3 @@
 each c in item['courses']
-    = c.name
+    a(href='/instructor/view/' + c.name)
+        = c.name
