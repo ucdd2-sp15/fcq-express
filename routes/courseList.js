@@ -1,7 +1,7 @@
 module.exports = function(app) {
 
     app.get('/course/list', function(req, res) {
-
+        var _ = require('lodash')
         // get the courses collection
         var courses = app.db.get('courses')
 
@@ -13,6 +13,7 @@ module.exports = function(app) {
         }, function(err, docs) {
             
             res.render('course/list.jade', {
+                _ : _,
                 courses: docs
             })
         })
