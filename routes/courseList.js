@@ -5,7 +5,6 @@ module.exports = function(app) {
         // get the courses collection
         var courses = app.db.get('courses')
 
-        // compose a query to look up docs whose 'categories' field contains the word 'Doctors'
         var q = {}
 
         // execute the query to find those matched limiting to 20
