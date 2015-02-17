@@ -1,1 +1,5 @@
-| CSCI 1000, CSCI 2013, CSCI 1052 ...
+ul
+each s in item['Courses']
+	div.row
+		div.five.columns
+			li= s['subject'] + ' ' + s['number']

@@ -1,2 +1,5 @@
-= item.insname1
-= item.insttl1
+- var underscored_name = item.insname1
+a(href='/instructor/view/' + underscored_name)
+	= item.insname1
+div.row
+	= item.insttl1

@@ -1,6 +1,9 @@
 extends ../layout.jade
 
+
 block content         
+
+    - var count=0
 
     div.row
         div.one.column
@@ -9,9 +12,20 @@ block content
             | Instructors
 
     each item in departments
+
+        - count = 0
+        each c in item.courses
+            - count = count + c.CoursesTaught.length
         div.row
             div.one.column
                 include field_name        
             div.four.columns
                 include field_instructors
+            div.three.columns
+                = item.courses.length
+            div.two.columns
+                | Total number of courses taught by all instructors
+                = count
+
+
 
