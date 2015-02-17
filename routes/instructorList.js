@@ -11,7 +11,6 @@ module.exports = function(app) {
         instructors.find({}, {
             limit: 20
         }, function(err, docs) {
-            console.log("INSTRUCTORS:" + docs);
             res.render('instructor/list.jade', {
                 instructors: docs
             })
