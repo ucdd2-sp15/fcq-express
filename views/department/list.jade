@@ -4,9 +4,11 @@ block content
 
     div.row
         div.one.column
-            | Dept.
+            strong= "Dept."
         div.four.columns
-            | Instructors
+            strong= "Instructors"
+        div.seven.columns
+            strong= "Statistics"
 
     each item in departments
         div.row
@@ -14,4 +16,6 @@ block content
                 include field_name        
             div.four.columns
                 include field_instructors
+            div.seven.columns
+                include field_stats
 
